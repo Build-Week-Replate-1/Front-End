@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -15,21 +15,39 @@ const useStyles = makeStyles(theme => ({
     marginRight: theme.spacing(2)
   },
   title: {
-    flexGrow: 1
+    flexGrow: 1,
+    color: "#01FF70",
+    fontFamily: "Bebas Neue",
+    fontSize: "3em"
+  },
+  navButtons: {
+    color: "#01FF70",
+    fontFamily: "Bebas Neue",
+    fontSize: "2em",
+    marginLeft: "10px",
+    marginRight: "10px"
   }
 }));
 
 const NavBar = () => {
-    const classes = useStyles();
-    return (
-        <div className={classes.root}>
-            <AppBar position="static">
-                <Toolbar>
-                    <IconButton></IconButton>
-                </Toolbar>
-            </AppBar>
-        </div>
-    );
+  const classes = useStyles();
+  return (
+    <div className={classes.root}>
+      <AppBar position="static" color="white">
+        <Toolbar>
+          {/*<IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">*/}
+          {/*    <MenuIcon/>*/}
+          {/*</IconButton>*/}
+          <Typography variant="h6" className={classes.title}>
+            REPLATE
+          </Typography>
+          <Button className={classes.navButtons}>About</Button>
+          <Button className={classes.navButtons}>Volunteer Login</Button>
+          <Button className={classes.navButtons}>Corporate Login</Button>
+        </Toolbar>
+      </AppBar>
+    </div>
+  );
 };
 
 export default NavBar;
