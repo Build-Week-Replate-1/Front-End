@@ -9,8 +9,14 @@ import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles({
-    card: {
+    cardLeft: {
         maxWidth: 650,
+        marginBottom: 30,
+    },
+    cardRight: {
+        maxWidth: 650,
+        marginBottom: 30,
+        marginLeft: 250,
     },
     title: {
         fontSize: 14,
@@ -23,13 +29,32 @@ const useStyles = makeStyles({
         fontFamily: "Bebas Neue",
         fontSize: "2.5em",
     },
+    headingsRight: {
+        color: "#01FF70",
+        fontFamily: "Bebas Neue",
+        fontSize: "2.5em",
+        marginLeft: 395,
+    },
     buttonSpecs: {
         backgroundColor: "#01FF70",
         color: "white",
-        "&:hovergit": {
+        "&:hover": {
             backgroundColor: "white",
             color: "#01FF70",
         }
+    },
+    buttonSpecsRight: {
+        backgroundColor: "#01FF70",
+        color: "white",
+        marginLeft: 540,
+        "&:hover": {
+            backgroundColor: "white",
+            color: "#01FF70",
+        }
+    },
+    textRight: {
+        marginLeft: 20,
+        textAlign: 'right',
     }
 });
 
@@ -41,8 +66,8 @@ const MainBody = () => {
             <React.Fragment>
                 <CssBaseline/>
                 <Container maxWidth="md">
-                    <Typography component="div" style={{ backgroundColor: "lightblue", height: "100vh" }}>
-                        <Card className={classes.card}>
+                    <Typography component="div" style={{ backgroundColor: "lightblue", height: "110vh" }}>
+                        <Card className={classes.cardLeft}>
                             <CardContent>
                                 <Typography className={classes.headings}>
                                     About
@@ -57,12 +82,12 @@ const MainBody = () => {
                         </Card>
 
 
-                        <Card className={classes.card}>
+                        <Card className={classes.cardRight}>
                             <CardContent>
-                                <Typography className={classes.headings}>
+                                <Typography className={classes.headingsRight}>
                                     For Non-Profits
                                 </Typography>
-                                <Typography>
+                                <Typography className={classes.textRight}>
                                     Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                                     Lorem Ipsum has been the industry's standard dummy text ever since the
                                     1500s, when an unknown printer took a galley of type and scrambled it to
@@ -70,12 +95,12 @@ const MainBody = () => {
                                 </Typography>
                             </CardContent>
                             <CardActions>
-                                <Button className={classes.buttonSpecs} size="large">Sign Up</Button>
+                                <Button className={classes.buttonSpecsRight} size="large">Sign Up</Button>
                             </CardActions>
                         </Card>
 
 
-                        <Card className={classes.card}>
+                        <Card className={classes.cardLeft}>
                             <CardContent>
                                 <Typography className={classes.headings}>
                                     For Business Owners
