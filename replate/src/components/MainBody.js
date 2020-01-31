@@ -12,11 +12,13 @@ const useStyles = makeStyles({
     cardLeft: {
         maxWidth: 650,
         marginBottom: 30,
+        boxShadow: 'none',
     },
     cardRight: {
         maxWidth: 650,
         marginBottom: 30,
         marginLeft: 250,
+        boxShadow: 'none',
     },
     title: {
         fontSize: 14,
@@ -41,6 +43,7 @@ const useStyles = makeStyles({
         "&:hover": {
             backgroundColor: "white",
             color: "#01FF70",
+            border: "1px solid #01FF70",
         }
     },
     buttonSpecsRight: {
@@ -50,6 +53,7 @@ const useStyles = makeStyles({
         "&:hover": {
             backgroundColor: "white",
             color: "#01FF70",
+            border: "1px solid #01FF70",
         }
     },
     textRight: {
@@ -66,7 +70,7 @@ const MainBody = () => {
             <React.Fragment>
                 <CssBaseline/>
                 <Container maxWidth="md">
-                    <Typography component="div" style={{ backgroundColor: "lightblue", height: "110vh" }}>
+                    <Typography component="div" style={{ backgroundColor: "white", height: "110vh" }}>
                         <Card className={classes.cardLeft}>
                             <CardContent>
                                 <Typography className={classes.headings}>
