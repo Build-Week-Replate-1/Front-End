@@ -22,6 +22,14 @@ const useStyles = makeStyles({
         color: "#01FF70",
         fontFamily: "Bebas Neue",
         fontSize: "2.5em",
+    },
+    buttonSpecs: {
+        backgroundColor: "#01FF70",
+        color: "white",
+        "&:hovergit": {
+            backgroundColor: "white",
+            color: "#01FF70",
+        }
     }
 });
 
@@ -61,6 +69,9 @@ const MainBody = () => {
                                     make a type specimen book.
                                 </Typography>
                             </CardContent>
+                            <CardActions>
+                                <Button className={classes.buttonSpecs} size="large">Sign Up</Button>
+                            </CardActions>
                         </Card>
 
 
@@ -76,6 +87,9 @@ const MainBody = () => {
                                     make a type specimen book.
                                 </Typography>
                             </CardContent>
+                            <CardActions>
+                                <Button className={classes.buttonSpecs} size="large">Sign Up</Button>
+                            </CardActions>
                         </Card>
 
                     </Typography>
