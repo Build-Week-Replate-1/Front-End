@@ -12,6 +12,8 @@ function App() {
       <NavBar/>
       <Route exact path="/" component={ MainBody }/>
       <Route exact path="/login" component={Login}/>
+      <Route exact path="/register/volunteer"/>
+      <Route exact path='/register/business'/>
     </div>
   );
 }
