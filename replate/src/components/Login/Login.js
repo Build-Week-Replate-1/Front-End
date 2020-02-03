@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import {Container, TextField, Button }  from '@material-ui/core';
 import {ThemeProvider, createMuiTheme} from '@material-ui/core/styles';
+import axios from 'axios';
 // create a component
 const Login = () => {
 
@@ -15,6 +16,14 @@ const Login = () => {
   const handleSubmit = event => {
     event.preventDefault();
     console.log(user);
+    axios
+    .post('#', user)
+    .then(res => {
+      console.log(res.data);
+    })
+    .catch(err => {
+      console.log(err)
+    })
     
   }
 
@@ -23,12 +32,13 @@ const Login = () => {
    <h1>Login</h1>
    <form onSubmit={event => handleSubmit(event)}>
 
-    <TextField label='Email' type='email' required fullWidth name='email' id='email' variant='filled' margin='normal' onChange={event => handleChange(event)}></TextField>
+    <TextField label='Email' type='email' required fullWidth name='email' id='email' value={user.email} variant='filled' margin='normal' onChange={event => handleChange(event)}></TextField>
 
-    <TextField label='Password' type='password' required fullWidth name='password' id='password' variant='filled' margin='normal' onChange={event => handleChange(event)}></TextField>
+    <TextField label='Password' type='password' required fullWidth name='password' id='password' value={user.password} variant='filled' margin='normal' onChange={event => handleChange(event)}></TextField>
 
     <Button type='submit' fullWidth color='primary' variant='contained'>Submit</Button>
    </form>
+
   </Container>
  );
 };
