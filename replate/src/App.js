@@ -4,12 +4,16 @@ import { Route } from "react-router-dom";
 import './App.css';
 import NavBar from "./components/NavBar";
 import MainBody from "./components/MainBody";
+import Login from './components/Login/Login';
 
 function App() {
   return (
     <div className="App">
       <NavBar/>
       <Route exact path="/" component={ MainBody }/>
+      <Route exact path="/login" component={Login}/>
+      <Route exact path="/register/volunteer"/>
+      <Route exact path='/register/business'/>
     </div>
   );
 }

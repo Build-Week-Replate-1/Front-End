@@ -33,7 +33,7 @@ const NavBar = () => {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <AppBar position="static" color="white">
+      <AppBar position="static" color='secondary'>
         <Toolbar>
           {/*<IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">*/}
           {/*    <MenuIcon/>*/}
@@ -42,8 +42,7 @@ const NavBar = () => {
             REPLATE
           </Typography>
           <Button className={classes.navButtons}>About</Button>
-          <Button className={classes.navButtons}>Volunteer Login</Button>
-          <Button className={classes.navButtons}>Corporate Login</Button>
+          <Button className={classes.navButtons} href='/login'>Login</Button>
         </Toolbar>
       </AppBar>
     </div>
