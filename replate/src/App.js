@@ -5,6 +5,10 @@ import './App.css';
 import NavBar from "./components/NavBar";
 import MainBody from "./components/MainBody";
 import Login from './components/Login/Login';
+import businessLogin from './components/Login/businessLogin';
+import BusinessRegister from './components/Registration/BusinessRegistration';
+import VolunteerRegister from './components/Registration/VolunteerRegistration';
+import Dashboard from './components/Dashboard/Dashboard';
 
 function App() {
   return (
@@ -12,8 +16,10 @@ function App() {
       <NavBar/>
       <Route exact path="/" component={ MainBody }/>
       <Route exact path="/login" component={Login}/>
-      <Route exact path="/register/volunteer"/>
-      <Route exact path='/register/business'/>
+      <Route exact path="/VolunteerRegister" component={VolunteerRegister}/>
+      <Route exact path='/BusinessRegister' component={BusinessRegister}/>
+      <Route exact path='/businesslogin' component={businessLogin} />
+      <Route exact path='/Dashboard' component={Dashboard} />
     </div>
   );
 }
