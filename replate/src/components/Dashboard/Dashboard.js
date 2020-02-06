@@ -4,9 +4,9 @@ import React, { useState, useEffect } from 'react';
 // create a component
 const Dashboard = () => {
  return (
-  <div style={styles.container}>
+//   <div style={styles.container}>
    <div>Dashboard</div>
-  </div>
+//   </div>
  );
 };
 

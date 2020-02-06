@@ -2,8 +2,9 @@
 import React, { useState} from 'react';
 import {Container, TextField, Button, Link, Grid }  from '@material-ui/core';
 import axios from 'axios';
+
 // create a component
-const Login = (props) => {
+const BusinessLogin = () => {
 
   const [user, setUser] = useState({username: '', password: ''})
 
@@ -16,21 +17,19 @@ const Login = (props) => {
     event.preventDefault();
     console.log(user);
     axios
-      .post("https://replated.herokuapp.com/api/volunteer/login", user)
+      .post("https://replated.herokuapp.com/api/business/login", user)
       .then(res => {
         console.log("logInResponse",res)
         localStorage.setItem("token", res.data.token)
-        props.history.push('/Dashboard')
       })
       .catch(err => {
         console.log(err);
-      });
-    
-  }
+      })
+      }
 
   return (
     <Container maxWidth="xs">
-      <h1>Login</h1>
+      <h1>Business Login</h1>
       <form onSubmit={event => handleSubmit(event)}>
         <TextField
           label="Username"
@@ -64,7 +63,7 @@ const Login = (props) => {
 
       <Grid container justify='center' spacing={5}>
         <Grid item>
-          <Link color="secondary" sm={2} href='VolunteerRegister'>Volunteer Registration</Link>
+          <Link color="secondary" sm={2} href='BusinessRegister'> Business Registration</Link>
         </Grid>
       </Grid>
     </Container>
@@ -73,4 +72,4 @@ const Login = (props) => {
 
 
 //make this component available to the app
-export default Login;
+export default BusinessLogin;
