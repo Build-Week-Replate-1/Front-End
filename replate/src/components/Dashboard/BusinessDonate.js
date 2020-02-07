@@ -2,14 +2,14 @@
 import React, { useState, useEffect } from 'react';
 
 // create a component
-const Dashboard = () => {
+const BusinessDonate = () => {
  return (
 //   <div style={styles.container}>
-   <div>Dashboard</div>
+   <div>Business Dashboard</div>
 //   </div>
  );
 };
 
 
 //make this component available to the app
-export default Dashboard;
+export default BusinessDonate;

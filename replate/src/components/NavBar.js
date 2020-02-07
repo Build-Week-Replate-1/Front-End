@@ -42,7 +42,8 @@ const NavBar = () => {
             REPLATE
           </Typography>
           <Button className={classes.navButtons}>About</Button>
-          <Button className={classes.navButtons} href='/login'>Login</Button>
+          <Button className={classes.navButtons} href='/login'>Volunteer Login</Button>
+          <Button className={classes.navButtons} href='/businesslogin'>Business Login</Button>
         </Toolbar>
       </AppBar>
     </div>
