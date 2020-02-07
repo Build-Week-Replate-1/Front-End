@@ -9,6 +9,7 @@ import businessLogin from './components/Login/businessLogin';
 import BusinessRegister from './components/Registration/BusinessRegistration';
 import VolunteerRegister from './components/Registration/VolunteerRegistration';
 import Dashboard from './components/Dashboard/Dashboard';
+import BusinessDonate from './components/Dashboard/BusinessDonate';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Route exact path='/BusinessRegister' component={BusinessRegister}/>
       <Route exact path='/businesslogin' component={businessLogin} />
       <Route exact path='/Dashboard' component={Dashboard} />
+      <Route exact path='/BusinessDonate' component={BusinessDonate} />
     </div>
   );
 }

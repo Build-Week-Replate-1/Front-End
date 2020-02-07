@@ -4,7 +4,7 @@ import {Container, TextField, Button, Link, Grid }  from '@material-ui/core';
 import axios from 'axios';
 
 // create a component
-const BusinessLogin = () => {
+const BusinessLogin = (props) => {
 
   const [user, setUser] = useState({username: '', password: ''})
 
@@ -19,13 +19,16 @@ const BusinessLogin = () => {
     axios
       .post("https://replated.herokuapp.com/api/business/login", user)
       .then(res => {
-        console.log("logInResponse",res)
+        console.log("registerResponse", res)
         localStorage.setItem("token", res.data.token)
+        props.history.push('/BusinessDonate')
       })
       .catch(err => {
         console.log(err);
-      })
-      }
+        console.log(user);
+      });
+    
+  }
 
   return (
     <Container maxWidth="xs">
