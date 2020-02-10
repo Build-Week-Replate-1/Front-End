@@ -94,7 +94,7 @@ const MainBody = () => {
                                 </Typography>
                             </CardContent>
                             <CardActions>
-                                <Button className={classes.buttonSpecsRight} size="large">Sign Up</Button>
+                                <Button className={classes.buttonSpecsRight} size="large" href="VolunteerRegister">Sign Up</Button>
                             </CardActions>
                         </Card>
 
@@ -112,7 +112,7 @@ const MainBody = () => {
                                 </Typography>
                             </CardContent>
                             <CardActions>
-                                <Button className={classes.buttonSpecs} size="large">Sign Up</Button>
+                                <Button className={classes.buttonSpecs} size="large" href="BusinessRegister">Sign Up</Button>
                             </CardActions>
                         </Card>
 
