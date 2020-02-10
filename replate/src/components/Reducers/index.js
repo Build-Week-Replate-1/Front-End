@@ -5,7 +5,7 @@ import {
     SIGNUP,
     ADD_FOOD,
     DELETE_FOOD,
-} from '../actions';
+} from '../Actions/index';
 
 const initialState = {
     foods: [],

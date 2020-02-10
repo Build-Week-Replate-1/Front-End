@@ -3,25 +3,25 @@ import ReactDOM from "react-dom";
 import { BrowserRouter as Router } from "react-router-dom";
 import "./index.css";
 import App from "./App";
-import { createMuiTheme } from "@material-ui/core/styles";
+import {Provider} from 'react-redux';
+import {createStore, applyMiddleware} from 'redux';
+import thunk from 'redux-thunk';
+import reducer from './components/Reducers/index'
 // import * as serviceWorker from "./serviceWorker";
 
-const theme = createMuiTheme({
-  palette: {
-    primary: {
-      main: "#01FF70"
-    },
-    secondary: {
-      main: '#888'
-    }
-  }
-});
+const store = createStore(
+  reducer,
+  applyMiddleware(thunk)
+);
+
 
 
 ReactDOM.render(
-  <Router>
-      <App/>
-  </Router>,
+  <Provider store = {store}>
+    <Router>
+        <App/>
+    </Router>
+  </Provider>,
   document.getElementById("root")
 );
 
